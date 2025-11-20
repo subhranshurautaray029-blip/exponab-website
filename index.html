@@ -1,90 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exponab — Import & Export Dubai</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exponab — Import & Export • Dubai</title>
+  <link rel="icon" href="Exponab%20Logo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header class="container header">
-    <img src="logo.png" class="logo" alt="Exponab Logo">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="products-fruit.html">Products</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <div class="brand">
+    <img src="Exponab%20Logo.png" alt="Exponab" class="logo">
+    <div class="brand-text">
+      <div class="company">Exponab</div>
+      <div class="tag muted">Import • Export • Dubai</div>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="products-fruit.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<main class="container">
+<!-- HERO -->
+<section class="hero container">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h1>Trusted sourcing & export of fruits, vegetables, pulses and halal meat</h1>
+      <p class="muted">Based in Dubai — Exponab provides end-to-end export services, cold chain logistics and export documentation to ensure your shipments arrive fresh and compliant.</p>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-left">
-            <h1>Exponab — Trusted Import & Export from Dubai</h1>
-            <p class="muted">
-                We supply premium quality Fruits, Vegetables, Pulses, and Halal Meat to global markets with 
-                complete logistics, documentation, and quality assurance.
-            </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+        <button class="btn btn-ghost" onclick="openWhatsApp()">Chat on WhatsApp</button>
+        <button class="btn btn-ghost" onclick="showIntro()">Watch Intro</button>
+      </div>
 
-            <div class="cta">
-                <a href="contact.html" class="btn-primary">Request a Quote</a>
-                <button onclick="openWhatsApp()" class="btn-ghost">WhatsApp</button>
-            </div>
-        </div>
+      <div class="icons-row" aria-hidden>
+        <div class="icon-card"><img src="assets/icons/fruits.png" alt=""><div>Fruits</div></div>
+        <div class="icon-card"><img src="assets/icons/vegetable.png" alt=""><div>Vegetables</div></div>
+        <div class="icon-card"><img src="assets/icons/phone.png" alt=""><div>Meat & Fish</div></div>
+        <div class="icon-card"><img src="assets/icons/wheat.png" alt=""><div>Pulses & Grains</div></div>
+      </div>
+    </div>
 
-        <div class="hero-right card">
-            <img src="hero.jpg" alt="Exponab" class="hero-img">
-        </div>
-    </section>
+    <div class="hero-right">
+      <div class="hero-card">
+        <img src="hero-banner.png" alt="Exponab hero" class="hero-image">
+      </div>
+      <div class="promise card">
+        <div class="p-title">Our Promise</div>
+        <div class="muted">Quality — Compliance — Timely Delivery</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- PRODUCT SECTIONS -->
-    <section style="margin-top:40px;">
-        <h2>Our Products</h2>
+<!-- CATEGORIES -->
+<section class="container categories">
+  <h2>Our Product Categories</h2>
+  <div class="grid">
+    <a class="card link-card" href="products-fruit.html">
+      <img src="assets/icons/fruits.png" alt="Fruits" class="cat-icon">
+      <h3>Fruits</h3>
+      <p class="muted">Seasonal & year-round export-grade fruits</p>
+    </a>
 
-        <div class="grid">
-            <a href="products-fruit.html" class="card link-card">
-                <h3>Fruits</h3>
-                <p class="muted">Premium, seasonal, and export-grade fruits.</p>
-            </a>
+    <a class="card link-card" href="products-vegetable.html">
+      <img src="assets/icons/vegetable.png" alt="Vegetables" class="cat-icon">
+      <h3>Vegetables</h3>
+      <p class="muted">Fresh vegetables with certified cold chain</p>
+    </a>
 
-            <a href="products-vegetable.html" class="card link-card">
-                <h3>Vegetables</h3>
-                <p class="muted">Fresh, hygienically handled vegetables.</p>
-            </a>
+    <a class="card link-card" href="products-pulses.html">
+      <img src="assets/icons/wheat.png" alt="Pulses" class="cat-icon">
+      <h3>Pulses & Grains</h3>
+      <p class="muted">Basmati, non-basmati, wheat & millets</p>
+    </a>
 
-            <a href="products-pulses.html" class="card link-card">
-                <h3>Pulses & Grains</h3>
-                <p class="muted">High-quality lentils, chickpeas, rice, and more.</p>
-            </a>
+    <a class="card link-card" href="products-meat.html">
+      <img src="assets/icons/phone.png" alt="Meat & Fish" class="cat-icon">
+      <h3>Meat & Seafood</h3>
+      <p class="muted">Halal-certified meat and frozen seafood</p>
+    </a>
+  </div>
+</section>
 
-            <a href="products-meat.html" class="card link-card">
-                <h3>Halal Meat</h3>
-                <p class="muted">Certified halal frozen & chilled meat.</p>
-            </a>
-        </div>
-    </section>
-
-</main>
-
-<!-- WHATSAPP BUTTON -->
-<div class="whatsapp">
-    <button onclick="openWhatsApp()" class="btn-primary">WhatsApp</button>
-</div>
+<!-- FEATURE / WHY -->
+<section class="container why">
+  <div class="grid">
+    <div class="card"><h3>Verified Suppliers</h3><p class="muted">Long term partnerships and supplier audits.</p></div>
+    <div class="card"><h3>Cold Chain</h3><p class="muted">Refrigerated transport and export packing.</p></div>
+    <div class="card"><h3>Export Docs</h3><p class="muted">Phytosanitary / Halal / HACCP documents provided.</p></div>
+  </div>
+</section>
 
 <footer class="footer container">
+  <div class="footer-inner">
     <div>© Exponab • Dubai</div>
-    <div class="muted">
-        Al Aweer Central Fruit & Vegetable Market, Dubai UAE • 
-        info@exponab.com • +971 58 128 5338 / +971 54 741 0141
-    </div>
+    <div class="muted">Al Aweer Central Fruit & Vegetable Market • info@exponab.com • +971 58 128 5338</div>
+  </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- Video modal (hidden until open) -->
+<div id="introModal" class="video-modal" onclick="hideIntro(event)">
+  <div class="video-wrap" role="dialog" aria-modal="true" aria-label="Exponab intro video">
+    <button class="close-btn" onclick="hideIntro(event)">✕</button>
+    <video id="introVideo" controls playsinline>
+      <source src="Exponab%20logo%20intro.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+  </div>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
