@@ -1,79 +1,57 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Pulses & Grains | Exponab</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="Exponab%20Logo.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — Pulses & Grains · Exponab</title>
+  <link rel="icon" href="assets/Exponab%20Logo.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header class="container header">
-  <img src="Exponab%20Logo.png" class="logo" alt="Exponab Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products-fruit.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="index.html"><img src="assets/Exponab%20Logo.png" alt="Exponab Logo" class="logo"></a>
+    <nav class="nav-main">
+      <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+      <ul id="navMenu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products-pulses.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <button class="btn btn-ghost" onclick="openWhatsApp()">WhatsApp</button>
+      <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+    </div>
+  </div>
 </header>
 
-<main class="container" style="padding-top:18px">
-
-  <section style="margin-bottom:18px">
-    <h1 style="margin:0 0 8px">Pulses & Grains</h1>
-    <p class="muted">High-quality grains sourced from trusted suppliers. Export-grade packing available in bulk bags, jute bags, or PP woven bags.</p>
-
-    <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-      <button class="btn-primary" onclick="document.location='contact.html'">Request a Quote</button>
-      <button class="btn-ghost" onclick="openWhatsApp()">WhatsApp</button>
+<main class="container section">
+  <div class="page-intro reveal"><h1>Pulses & Grains</h1><p class="muted">Bulk basmati/non-basmati rice, wheat, millet and more.</p>
+    <div style="margin:12px 0">
+      <a class="cat pill" href="products-fruit.html">Fruits</a>
+      <a class="cat pill" href="products-vegetable.html">Vegetables</a>
+      <a class="cat pill" href="products-meat.html">Meat & Fish</a>
+      <a class="cat pill" href="products-pulses.html">Pulses & Grains</a>
     </div>
-  </section>
+  </div>
+  <div class="grid product-grid">
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/pulses/Basmati%20Rice.jpg" alt="Basmati Rice"></div><div class="product-meta"><div class="product-title">Basmati Rice</div><div class="product-desc">Long-grain basmati rice — export packing</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Basmati%20Rice">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-  <section>
-    <div class="grid">
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/pulses/Millet.jpg" alt="Millet"></div><div class="product-meta"><div class="product-title">Millet</div><div class="product-desc">Various millet types for bulk supply.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Millet">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- Basmati Rice -->
-      <div class="card">
-        <img src="assets/pulses/Basmati%20Rice.jpg" class="product-img" alt="Basmati Rice">
-        <h3>Basmati Rice</h3>
-        <p class="muted">Long-grain premium Basmati rice — aged, aromatic and export certified. Packaging options: 1kg to 50kg.</p>
-      </div>
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/pulses/Non%E2%80%90Basmati%20milled%20rice.jpg" alt="Non-Basmati rice"></div><div class="product-meta"><div class="product-title">Non-Basmati Milled Rice</div><div class="product-desc">Milled rice suitable for different markets.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Non-Basmati%20rice">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- Millet -->
-      <div class="card">
-        <img src="assets/pulses/Millet.jpg" class="product-img" alt="Millet">
-        <h3>Millet</h3>
-        <p class="muted">Nutritious millet varieties supplied in bulk bags — ideal for food industries and wholesale buyers.</p>
-      </div>
-
-      <!-- Non-Basmati rice -->
-      <div class="card">
-        <img src="assets/pulses/Non‐Basmati%20milled%20rice.jpg" class="product-img" alt="Non-Basmati Rice">
-        <h3>Non-Basmati Rice</h3>
-        <p class="muted">Economical non-Basmati milled rice — suitable for mass markets, Africa & Middle East buyers.</p>
-      </div>
-
-      <!-- Wheat -->
-      <div class="card">
-        <img src="assets/pulses/Wheat.jpg" class="product-img" alt="Wheat">
-        <h3>Wheat</h3>
-        <p class="muted">High-quality wheat grains for flour mills, wholesalers and export distribution.</p>
-      </div>
-
-    </div>
-  </section>
-
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/pulses/Wheat.jpg" alt="Wheat"></div><div class="product-meta"><div class="product-title">Wheat</div><div class="product-desc">Durum and common wheat for bulk export.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Wheat">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
+  </div>
 </main>
 
-<footer class="footer container">
-  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-    <div>© Exponab • Dubai</div>
-    <div class="muted">info@exponab.com • +971 58 128 5338 / +971 54 741 0141</div>
-  </div>
+<footer class="site-footer">
+  <div class="container footer-inner"><div class="copy">© Exponab • Dubai</div><div class="contact">info@exponab.com • +971 58 128 5338</div></div>
 </footer>
 
+<button class="fab-wa" onclick="openWhatsApp()" title="Chat on WhatsApp">💬</button>
 <script src="script.js"></script>
 </body>
 </html>
