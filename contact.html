@@ -2,98 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact Exponab — Request a Quote</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="Exponab Logo.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Exponab</title>
+  <link rel="icon" href="assets/Exponab%20Logo.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header class="container header">
-  <img src="Exponab Logo.png" class="logo" alt="Exponab Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products-fruit.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="index.html"><img src="assets/Exponab%20Logo.png" alt="Exponab Logo" class="logo"></a>
+    <nav class="nav-main">
+      <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+      <ul id="navMenu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products-fruit.html">Products</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta"><button class="btn btn-ghost" onclick="openWhatsApp()">WhatsApp</button><a class="btn btn-primary" href="contact.html">Request a Quote</a></div>
+  </div>
 </header>
 
-<main class="container" style="padding-top:18px">
+<main class="container section">
+  <h1>Request a Quote</h1>
+  <p class="muted">Fill the form below with product, estimated quantity, destination and any certifications you require. We will respond within 24 business hours.</p>
 
-  <!-- Logo intro video + hero -->
-  <section class="card" style="padding:18px;display:flex;gap:18px;flex-wrap:wrap;align-items:center">
-    <div style="flex:1;min-width:260px">
-      <h1 style="margin:0 0 6px">Request a Quote</h1>
-      <p class="muted" style="margin:0 0 12px">Fill the form below with your requirements — product, estimated quantity, destination port and any special certifications you require. We will respond within 24 hours on business days.</p>
-
-      <div style="margin-top:12px">
-        <strong class="muted">Office</strong>
-        <div class="muted" style="margin-top:6px">Al Aweer Central Fruit & Vegetable Market, Dubai, UAE</div>
-        <div class="muted" style="margin-top:6px"><strong>Email:</strong> <a href="mailto:info@exponab.com">info@exponab.com</a></div>
-        <div class="muted" style="margin-top:6px"><strong>Phone:</strong> <a href="tel:+971581285338">+971 58 128 5338</a> / <a href="tel:+971547410141">+971 54 741 0141</a></div>
-      </div>
+  <div class="grid cards">
+    <div class="card reveal">
+      <h3>Office</h3>
+      <p>Al Aweer Central Fruit & Vegetable Market, Dubai, UAE</p>
+      <p>Email: <a href="mailto:info@exponab.com">info@exponab.com</a></p>
+      <p>Phone: +971 58 128 5338 / +971 54 741 0141</p>
     </div>
 
-    <div style="width:420px;min-width:220px">
-      <!-- If the video file is in root with spaces in the name, use percent-encoded spaces in the src -->
-      <video controls playsinline style="width:100%;border-radius:10px;display:block" poster="hero-banner.png">
-        <source src="Exponab%20logo%20intro.mp4" type="video/mp4">
-        <!-- fallback -->
-        Your browser does not support the video element.
-      </video>
-    </div>
-  </section>
+    <div class="card reveal">
+      <h3>Quick Quote</h3>
+      <!-- Formspree action placeholder (replace YOUR_FORM_ID with your ID if you want) -->
+      <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label>
+          Name
+          <input name="name" placeholder="Your full name" required>
+        </label>
+        <label>
+          Company / Country
+          <input name="company" placeholder="Company name / Country">
+        </label>
+        <label>
+          Product
+          <select name="product">
+            <option>Fruits</option>
+            <option>Vegetables</option>
+            <option>Meat & Seafood</option>
+            <option>Pulses & Grains</option>
+          </select>
+        </label>
+        <label>
+          Quantity & Packaging
+          <input name="quantity" placeholder="Example: 10 MT, 20 x 25kg">
+        </label>
+        <label>
+          Destination (port / city / country)
+          <input name="destination" placeholder="Port or city where shipment">
+        </label>
+        <label>
+          Message / Requirements
+          <textarea name="requirements" placeholder="Any important details (certifications, shelf life, packing, expected ship date)"></textarea>
+        </label>
 
-  <!-- Quote form -->
-  <section style="margin-top:18px">
-    <div class="card contact-card">
-      <h2 style="margin-top:0">Request a Quote — Quick Form</h2>
-      <form id="quoteForm" onsubmit="return sendQuote(event)">
-        <label>Name</label>
-        <input id="qname" placeholder="Your full name" required>
-
-        <label>Company / Country</label>
-        <input id="qcompany" placeholder="Company name and country">
-
-        <label>Product (choose one)</label>
-        <select id="qproduct" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-bottom:8px">
-          <option>Fruits</option>
-          <option>Vegetables</option>
-          <option>Pulses & Grains</option>
-          <option>Halal Meat</option>
-          <option>Fish & Seafood</option>
-          <option>Other</option>
-        </select>
-
-        <label>Quantity & Packaging</label>
-        <input id="qqty" placeholder="Example: 10 MT, 20 x 25kg cartons">
-
-        <label>Destination (port / city / country)</label>
-        <input id="qdest" placeholder="Port or city where shipment will be delivered">
-
-        <label>Message / Requirements</label>
-        <textarea id="qmessage" rows="5" placeholder="Any important details like certification, shelf life, packing, expected shipment date"></textarea>
-
-        <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
-          <button type="submit" class="btn-primary">Send Quote (Email)</button>
-          <button type="button" class="btn-ghost" onclick="openWhatsApp()">Open WhatsApp</button>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button class="btn btn-primary" type="submit">Send Quote</button>
+          <a class="btn btn-ghost" href="mailto:info@exponab.com">Open email</a>
         </div>
       </form>
-
-      <p class="muted" style="margin-top:10px">Note: This form opens your email client using your default mail app (mailto). If you prefer direct form storage, I can later set up GitHub Pages + Formspree or Netlify Forms (both free).</p>
+      <p class="muted" style="margin-top:10px">Note: If you prefer direct email, the Open email link opens your default mail client. Formspree works without a server — replace the action URL with your form endpoint.</p>
     </div>
-  </section>
-
+  </div>
 </main>
 
-<footer class="footer container">
-  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-    <div>© Exponab • Dubai</div>
-    <div class="muted">info@exponab.com • +971 58 128 5338 / +971 54 741 0141</div>
-  </div>
+<footer class="site-footer">
+  <div class="container footer-inner"><div class="copy">© Exponab • Dubai</div><div class="contact">info@exponab.com • +971 58 128 5338</div></div>
 </footer>
 
+<button class="fab-wa" onclick="openWhatsApp()" title="Chat on WhatsApp">💬</button>
 <script src="script.js"></script>
 </body>
 </html>
