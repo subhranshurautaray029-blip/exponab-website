@@ -1,68 +1,76 @@
-/* styles.css — Exponab dark premium theme */
-
-/* Color tokens */
+/* styles.css — dark premium tuned to Exponab logo */
 :root{
-  --bg-1: #071623;
-  --bg-2: #0b2130;
-  --card: #0f2431;
-  --muted: #9fb0c0;
-  --text: #e7f2f7;
-  --accent-a: #2563eb;   /* blue */
-  --accent-b: #7c3aed;   /* purple */
-  --accent-c: #ff8a00;   /* orange */
-  --glass: rgba(255,255,255,0.03);
-  --radius: 12px;
+  --bg-1:#04121a;
+  --bg-2:#071a29;
+  --card:#0b2130;
+  --muted:#9fb0c0;
+  --text:#e6f0f5;
+  --accent-a:#2563eb;
+  --accent-b:#7c3aed;
+  --accent-c:#ff8a00;
+  --radius:12px;
 }
 
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:var(--text);-webkit-font-smoothing:antialiased}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:var(--text);-webkit-font-smoothing:antialiased}
 a{color:inherit}
-
-/* Layout */
 .container{max-width:1100px;margin:0 auto;padding:22px}
-.header{display:flex;align-items:center;gap:18px;padding:6px 0}
-.logo{height:56px;display:block}
-nav{margin-left:auto;display:flex;gap:14px;align-items:center}
-nav a{color:var(--muted);text-decoration:none;font-weight:700;padding:8px;border-radius:8px}
-nav a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
+
+/* Header */
+.header{display:flex;align-items:center;gap:18px;padding:8px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{height:56px}
+.brand-text .company{font-weight:800;font-size:18px}
+.brand-text .tag{font-size:12px;color:var(--muted)}
+.main-nav{margin-left:auto;display:flex;gap:14px}
+.main-nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px;font-weight:700}
+.main-nav a.active, .main-nav a:hover{background:rgba(255,255,255,0.02);color:var(--text)}
 
 /* Hero */
-.hero{display:flex;gap:28px;align-items:center;padding:28px 0}
-.hero-left{flex:1}
-.hero-right{width:420px;min-width:260px}
-.hero h1{font-size:36px;margin:0 0 10px;line-height:1.05;background:linear-gradient(90deg,var(--accent-a),var(--accent-b));-webkit-background-clip:text;color:transparent}
+.hero{padding:34px 0}
+.hero-inner{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.hero-left{flex:1;min-width:260px}
+.hero h1{font-size:36px;margin:0 0 10px;line-height:1.03;background:linear-gradient(90deg,var(--accent-a),var(--accent-b));-webkit-background-clip:text;color:transparent}
 .muted{color:var(--muted)}
-.hero-img{width:100%;height:320px;object-fit:cover;border-radius:var(--radius);display:block}
-
-/* Buttons */
-.btn{display:inline-block;padding:10px 16px;border-radius:10px;border:0;font-weight:800;cursor:pointer;text-decoration:none}
-.btn-primary{background:linear-gradient(90deg,var(--accent-a),var(--accent-c));color:#031026}
+.cta{display:flex;gap:12px;margin-top:12px}
+.btn{padding:10px 14px;border-radius:10px;border:0;font-weight:800;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,var(--accent-a),var(--accent-c));color:#041226}
 .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.hero-right{width:420px;min-width:260px}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:8px;border-radius:12px}
+.hero-image{width:100%;height:300px;object-fit:cover;border-radius:10px}
+.promise{margin-top:12px;padding:14px}
 
-/* Cards & Grid */
-.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.02)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
-.link-card{text-decoration:none;color:inherit;display:block;padding:18px}
-.link-card h3{margin:0 0 6px}
-.product-img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+/* icons row */
+.icons-row{display:flex;gap:12px;margin-top:18px}
+.icon-card{display:flex;align-items:center;gap:8px;background:var(--card);padding:10px;border-radius:10px}
+.icon-card img{height:28px;opacity:0.95}
+.icon-card div{font-weight:700}
 
-/* Contact / Forms */
-.contact-card input,.contact-card textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);margin-bottom:8px}
-.contact-card button{background:linear-gradient(90deg,var(--accent-a),var(--accent-c));border:0;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer;color:#031026}
+/* categories */
+.categories{padding:22px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.02)}
+.link-card{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.cat-icon{height:42px;opacity:0.98}
 
-/* Footer */
-.footer{margin-top:28px;padding:22px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.03)}
+/* why */
+.why{margin-top:18px}
 
-/* WhatsApp floating */
-.whatsapp{position:fixed;right:18px;bottom:18px;z-index:999}
-.whatsapp button{box-shadow:0 8px 30px rgba(0,0,0,0.45);}
+/* footer */
+.footer{margin-top:32px;padding:22px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.03)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
 
-/* Responsive */
+/* video modal */
+.video-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(1,6,12,0.7);z-index:1000;padding:24px}
+.video-wrap{max-width:920px;width:100%;background:var(--card);padding:12px;border-radius:12px;position:relative}
+.video-wrap video{width:100%;height:auto;border-radius:8px}
+.close-btn{position:absolute;right:10px;top:8px;background:transparent;border:0;color:var(--muted);font-size:20px;cursor:pointer}
+
+/* responsive */
 @media(max-width:900px){
-  .hero{flex-direction:column}
-  .hero-right{width:100%}
-  .hero h1{font-size:28px}
-  nav{display:flex;gap:8px}
+  .hero-inner{flex-direction:column}
+  .hero-image{height:220px}
   .logo{height:48px}
-  .container{padding:16px}
+  .hero h1{font-size:28px}
 }
