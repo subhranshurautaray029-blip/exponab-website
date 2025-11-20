@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact Exponab</title>
+  <title>Contact · Exponab</title>
   <link rel="icon" href="assets/Exponab%20Logo.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -20,68 +20,100 @@
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
-    <div class="header-cta"><button class="btn btn-ghost" onclick="openWhatsApp()">WhatsApp</button><a class="btn btn-primary" href="contact.html">Request a Quote</a></div>
+    <div class="header-cta">
+      <button class="btn btn-ghost" onclick="openWhatsApp()">WhatsApp</button>
+      <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+    </div>
   </div>
 </header>
 
 <main class="container section">
-  <h1>Request a Quote</h1>
-  <p class="muted">Fill the form below with product, estimated quantity, destination and any certifications you require. We will respond within 24 business hours.</p>
+  <div class="contact-grid">
 
-  <div class="grid cards">
-    <div class="card reveal">
-      <h3>Office</h3>
-      <p>Al Aweer Central Fruit & Vegetable Market, Dubai, UAE</p>
-      <p>Email: <a href="mailto:info@exponab.com">info@exponab.com</a></p>
-      <p>Phone: +971 58 128 5338 / +971 54 741 0141</p>
-    </div>
+    <!-- LEFT: form -->
+    <section class="contact-form card reveal">
+      <h1>Contact our team</h1>
+      <p class="muted">Have questions about product, quantity or documentation? Fill the quick form below and we will reply within 24 business hours.</p>
 
-    <div class="card reveal">
-      <h3>Quick Quote</h3>
-      <!-- Formspree action placeholder (replace YOUR_FORM_ID with your ID if you want) -->
-      <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label>
-          Name
-          <input name="name" placeholder="Your full name" required>
-        </label>
-        <label>
-          Company / Country
-          <input name="company" placeholder="Company name / Country">
-        </label>
-        <label>
-          Product
-          <select name="product">
-            <option>Fruits</option>
-            <option>Vegetables</option>
-            <option>Meat & Seafood</option>
-            <option>Pulses & Grains</option>
-          </select>
-        </label>
-        <label>
-          Quantity & Packaging
-          <input name="quantity" placeholder="Example: 10 MT, 20 x 25kg">
-        </label>
-        <label>
-          Destination (port / city / country)
-          <input name="destination" placeholder="Port or city where shipment">
-        </label>
-        <label>
-          Message / Requirements
-          <textarea name="requirements" placeholder="Any important details (certifications, shelf life, packing, expected ship date)"></textarea>
-        </label>
+      <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form-grid">
+        <div class="field">
+          <label>First name<input name="first" placeholder="First name" required></label>
+        </div>
+        <div class="field">
+          <label>Last name<input name="last" placeholder="Last name"></label>
+        </div>
+        <div class="field full">
+          <label>Email<input name="email" type="email" placeholder="you@company.com" required></label>
+        </div>
+        <div class="field full">
+          <label>Phone<input name="phone" placeholder="+971 58 128 5338"></label>
+        </div>
+        <div class="field full">
+          <label>Product / category
+            <select name="product">
+              <option>Fruits</option>
+              <option>Vegetables</option>
+              <option>Meat & Fish</option>
+              <option>Pulses & Grains</option>
+            </select>
+          </label>
+        </div>
+        <div class="field full">
+          <label>Quantity & packing<input name="quantity" placeholder="Example: 10 MT, 20x25kg"></label>
+        </div>
 
-        <div style="display:flex;gap:10px;align-items:center">
-          <button class="btn btn-primary" type="submit">Send Quote</button>
+        <div class="field full">
+          <label>Destination<input name="destination" placeholder="Port / city / country"></label>
+        </div>
+
+        <div class="field full">
+          <label>Message / Requirements
+            <textarea name="requirements" rows="5" placeholder="Any certifications, shelf life, expected ship date"></textarea>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Send message</button>
           <a class="btn btn-ghost" href="mailto:info@exponab.com">Open email</a>
         </div>
       </form>
-      <p class="muted" style="margin-top:10px">Note: If you prefer direct email, the Open email link opens your default mail client. Formspree works without a server — replace the action URL with your form endpoint.</p>
-    </div>
+    </section>
+
+    <!-- RIGHT: contact card + quick links -->
+    <aside class="contact-info card reveal">
+      <img src="assets/Exponab%20Logo.png" alt="Exponab" class="info-logo">
+      <h3>Head Office</h3>
+      <p>Al Aweer Central Fruit & Vegetable Market, Dubai, UAE</p>
+      <p><strong>Email</strong><br><a href="mailto:info@exponab.com">info@exponab.com</a></p>
+      <p><strong>Phone</strong><br><a href="tel:+971581285338">+971 58 128 5338</a><br><a href="tel:+971547410141">+971 54 741 0141</a></p>
+
+      <hr>
+
+      <h4>Quick links</h4>
+      <ul class="quick-links">
+        <li><a href="products-fruit.html">Fruits</a></li>
+        <li><a href="products-vegetable.html">Vegetables</a></li>
+        <li><a href="products-meat.html">Meat & Fish</a></li>
+        <li><a href="products-pulses.html">Pulses & Grains</a></li>
+      </ul>
+
+      <div style="margin-top:14px">
+        <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+        <a class="btn btn-ghost" onclick="openWhatsApp()">Chat on WhatsApp</a>
+      </div>
+
+      <hr>
+
+      <p class="muted small">Prefer a direct message? Use the WhatsApp button bottom-right or call the office.</p>
+    </aside>
   </div>
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner"><div class="copy">© Exponab • Dubai</div><div class="contact">info@exponab.com • +971 58 128 5338</div></div>
+  <div class="container footer-inner">
+    <div class="copy">© Exponab • Dubai</div>
+    <div class="contact">info@exponab.com • +971 58 128 5338</div>
+  </div>
 </footer>
 
 <button class="fab-wa" onclick="openWhatsApp()" title="Chat on WhatsApp">💬</button>
