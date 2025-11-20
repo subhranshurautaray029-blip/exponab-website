@@ -1,4 +1,5 @@
 /* styles.css — Vibrant fresh produce + hero redesign */
+
 /* ACCENTS (tuned to your logo) */
 :root{
   --accent-blue:#1e90ff;
@@ -106,4 +107,102 @@ html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg-1),var
   .product-grid{grid-template-columns:repeat(1,1fr)}
   .hero-headline{font-size:18px}
   .thumb{height:140px}
+}
+
+/* --- contact layout (below) --- */
+.contact-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 18px 0;
+}
+.card {
+  background: rgba(2,18,21,0.6);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+.contact-form h1 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  color: var(--text);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.form-grid .field {
+  display: flex;
+  flex-direction: column;
+}
+.form-grid .field.full {
+  grid-column: 1 / -1;
+}
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: var(--text);
+  outline: none;
+}
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus{
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.12);
+  border-color: rgba(124,58,237,0.7);
+}
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 6px;
+}
+
+/* contact card */
+.contact-info .info-logo {
+  width: 64px;
+  display: block;
+  margin-bottom: 10px;
+}
+.contact-info h3 {
+  margin-top: 0;
+}
+.quick-links {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  display: grid;
+  gap: 6px;
+}
+.quick-links a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+/* Larger screens: two-column layout */
+@media (min-width: 980px) {
+  .contact-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screens: single-column form layout */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
