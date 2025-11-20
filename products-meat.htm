@@ -1,94 +1,61 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Meat & Seafood | Exponab</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="Exponab%20Logo.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — Meat & Fish · Exponab</title>
+  <link rel="icon" href="assets/Exponab%20Logo.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header class="container header">
-  <img src="Exponab%20Logo.png" class="logo" alt="Exponab Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products-fruit.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="index.html"><img src="assets/Exponab%20Logo.png" alt="Exponab Logo" class="logo"></a>
+    <nav class="nav-main">
+      <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+      <ul id="navMenu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products-meat.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <button class="btn btn-ghost" onclick="openWhatsApp()">WhatsApp</button>
+      <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+    </div>
+  </div>
 </header>
 
-<main class="container" style="padding-top:18px">
-
-  <section style="margin-bottom:18px">
-    <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
-      <div style="flex:1;min-width:260px">
-        <h1 style="margin:0 0 6px">Halal Meat & Seafood</h1>
-        <p class="muted" style="margin:0 0 12px">We supply halal-certified chilled & frozen meat, plus a selection of fresh seafood. All products are handled under strict cold-chain procedures and packed to buyer specifications.</p>
-      </div>
-      <div style="min-width:220px">
-        <button class="btn-primary" onclick="document.location='contact.html'">Request a Quote</button>
-        <button class="btn-ghost" onclick="openWhatsApp()">Chat on WhatsApp</button>
-      </div>
+<main class="container section">
+  <div class="page-intro reveal"><h1>Products — Meat & Fish</h1><p class="muted">Halal-certified meat and frozen seafood with cold-chain handling.</p>
+    <div style="margin:12px 0">
+      <a class="cat pill" href="products-fruit.html">Fruits</a>
+      <a class="cat pill" href="products-vegetable.html">Vegetables</a>
+      <a class="cat pill" href="products-meat.html">Meat & Fish</a>
+      <a class="cat pill" href="products-pulses.html">Pulses & Grains</a>
     </div>
-  </section>
+  </div>
 
-  <section>
-    <div class="grid">
+  <div class="grid product-grid">
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/meat/Chicken%20Meat.jpg" alt="Chicken Meat"></div><div class="product-meta"><div class="product-title">Chicken Meat</div><div class="product-desc">Halal-certified, chilled/frozen.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Chicken%20Meat">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- Chicken Meat -->
-      <div class="card">
-        <img src="assets/meat/Chicken%20Meat.jpg" alt="Chicken Meat" class="product-img">
-        <h3>Chicken Meat</h3>
-        <p class="muted">Halal fresh and frozen chicken — portioned and packed per buyer requirements. Available in bulk cartons.</p>
-      </div>
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/meat/Cuttlefish.jpg" alt="Cuttlefish"></div><div class="product-meta"><div class="product-title">Cuttlefish</div><div class="product-desc">Frozen cephalopod — export grade.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Cuttlefish">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- Cuttlefish (seafood) -->
-      <div class="card">
-        <img src="assets/meat/Cuttlefish.jpg" alt="Cuttlefish" class="product-img">
-        <h3>Cuttlefish</h3>
-        <p class="muted">Fresh frozen cuttlefish, carefully processed and IQF frozen for export.</p>
-      </div>
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/meat/Indian%20Carp.jpg" alt="Indian Carp"></div><div class="product-meta"><div class="product-title">Indian Carp</div><div class="product-desc">Freshwater fish packing.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Indian%20Carp">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- Indian Carp (seafood) -->
-      <div class="card">
-        <img src="assets/meat/Indian%20Carp.jpg" alt="Indian Carp" class="product-img">
-        <h3>Indian Carp</h3>
-        <p class="muted">Locally sourced Indian carp — suitable for chilled or frozen shipments depending on buyer needs.</p>
-      </div>
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/meat/Mackerel%20Fish.jpg" alt="Mackerel"></div><div class="product-meta"><div class="product-title">Mackerel</div><div class="product-desc">Frozen mackerel for export.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Mackerel">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- Mackerel Fish -->
-      <div class="card">
-        <img src="assets/meat/Mackerel%20Fish.jpg" alt="Mackerel Fish" class="product-img">
-        <h3>Mackerel</h3>
-        <p class="muted">Good quality mackerel for retail and processing — available fresh or frozen.</p>
-      </div>
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/meat/Tilapia%20Fish.jpg" alt="Tilapia"></div><div class="product-meta"><div class="product-title">Tilapia</div><div class="product-desc">Frozen tilapia fillets / whole.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Tilapia">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- Tilapia Fish -->
-      <div class="card">
-        <img src="assets/meat/Tilapia%20Fish.jpg" alt="Tilapia Fish" class="product-img">
-        <h3>Tilapia</h3>
-        <p class="muted">Tilapia — farmed and handled under hygiene protocols for export markets.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section style="margin-top:22px" class="card">
-    <h3 style="margin:0 0 8px">Certifications & Cold Chain</h3>
-    <p class="muted" style="margin:0">All meat products can be supplied with Halal certification on request. We work with refrigerated logistics partners and provide export documentation, sanitary and phytosanitary (SPS) certificates as required by destination countries.</p>
-  </section>
-
+  </div>
 </main>
 
-<footer class="footer container">
-  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-    <div>© Exponab • Dubai</div>
-    <div class="muted">info@exponab.com • +971 58 128 5338 / +971 54 741 0141</div>
-  </div>
+<footer class="site-footer">
+  <div class="container footer-inner"><div class="copy">© Exponab • Dubai</div><div class="contact">info@exponab.com • +971 58 128 5338</div></div>
 </footer>
 
+<button class="fab-wa" onclick="openWhatsApp()" title="Chat on WhatsApp">💬</button>
 <script src="script.js"></script>
 </body>
 </html>
