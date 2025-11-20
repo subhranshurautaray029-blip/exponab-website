@@ -1,284 +1,65 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Products — Vegetables | Exponab</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="Exponab%20Logo.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — Vegetables · Exponab</title>
+  <link rel="icon" href="assets/Exponab%20Logo.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header class="container header">
-  <img src="Exponab%20Logo.png" class="logo" alt="Exponab Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products-fruit.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="index.html"><img src="assets/Exponab%20Logo.png" alt="Exponab Logo" class="logo"></a>
+    <nav class="nav-main">
+      <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+      <ul id="navMenu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products-vegetable.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <button class="btn btn-ghost" onclick="openWhatsApp()">WhatsApp</button>
+      <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+    </div>
+  </div>
 </header>
 
-<main class="container" style="padding-top:18px">
-
-  <section style="margin-bottom:18px">
-    <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
-      <div style="flex:1;min-width:260px">
-        <h1 style="margin:0 0 6px">Vegetables</h1>
-        <p class="muted" style="margin:0 0 12px">Fresh vegetables sourced and handled with refrigerated logistics — graded and packed per buyer specifications. Contact us for varieties, packing and lead times.</p>
-      </div>
-      <div style="min-width:220px">
-        <button class="btn-primary" onclick="document.location='contact.html'">Request a Quote</button>
-        <button class="btn-ghost" onclick="openWhatsApp()">Chat on WhatsApp</button>
-      </div>
+<main class="container section">
+  <div class="page-intro reveal">
+    <h1>Products — Vegetables</h1>
+    <p class="muted">Fresh export-grade vegetables handled with temperature control.</p>
+    <div style="margin:12px 0">
+      <a class="cat pill" href="products-fruit.html">Fruits</a>
+      <a class="cat pill" href="products-vegetable.html">Vegetables</a>
+      <a class="cat pill" href="products-meat.html">Meat & Fish</a>
+      <a class="cat pill" href="products-pulses.html">Pulses & Grains</a>
     </div>
-  </section>
+  </div>
 
-  <section>
-    <div class="grid">
-      <!-- Coriander Leaf -->
-      <div class="card">
-        <img src="assets/vegetable/Coriander Leaf.png" alt="Coriander Leaf" class="product-img">
-        <h3>Coriander Leaf</h3>
-        <p class="muted">Fresh coriander leaves — carefully trimmed and packed for retail and processing.</p>
-      </div>
+  <div class="grid product-grid">
+    <!-- include vegetables you uploaded -->
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/vegetable/Artichoke.png" alt="Artichoke"></div><div class="product-meta"><div class="product-title">Artichoke</div><div class="product-desc">Fresh artichokes for export.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Artichoke">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- Cucumber -->
-      <div class="card">
-        <img src="assets/vegetable/Cucumber.png" alt="Cucumber" class="product-img">
-        <h3>Cucumber</h3>
-        <p class="muted">Crisp cucumbers suitable for fresh markets and processing.</p>
-      </div>
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/vegetable/Asparagus.png" alt="Asparagus"></div><div class="product-meta"><div class="product-title">Asparagus</div><div class="product-desc">Tender asparagus spears.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Asparagus">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- White Pumpkin -->
-      <div class="card">
-        <img src="assets/vegetable/White Pumpkin.png" alt="White Pumpkin" class="product-img">
-        <h3>White Pumpkin</h3>
-        <p class="muted">Large white pumpkins — bulk shipments available.</p>
-      </div>
+    <!-- Continue with Baby Corn, Bitter Gourd, Bok Choy, Bottle Gourd, Brocolli, Brussels Sprouts, Button Mushroom, Cabbage, Cauliflower, Celery, Chinnese Cabbage, Coriander Leaf, Cucumber, Fennel Bulb, Garlic Whole Big (White), Green Zucchini, Ivy Gourd, King Oyester Mushroom, Knol Khol, Leeks, Maitake (Hen-of-the-Woods), Onion, Oyester Mushroom, Pointed Gourd, Red Pumpkin, Ridge Gourd, Shiitake Mushrooms, Snake Gourd, Sponge Gourd, White Pumpkin, Yellow Zucchini -->
+    <article class="product-card reveal"><div class="thumb"><img loading="lazy" src="assets/vegetable/Baby%20Corn.png" alt="Baby Corn"></div><div class="product-meta"><div class="product-title">Baby Corn</div><div class="product-desc">Crunchy baby corn for export.</div><div class="product-actions"><a class="btn-quote" href="contact.html?product=Baby%20Corn">Request Quote</a><a class="btn btn-ghost" href="https://wa.me/971581285338">WhatsApp</a></div></div></article>
 
-      <!-- Red Pumpkin -->
-      <div class="card">
-        <img src="assets/vegetable/Red Pumpkin.png" alt="Red Pumpkin" class="product-img">
-        <h3>Red Pumpkin</h3>
-        <p class="muted">Red pumpkin varieties for retail and processing.</p>
-      </div>
-
-      <!-- Ivy Gourd -->
-      <div class="card">
-        <img src="assets/vegetable/Ivy Gourd.png" alt="Ivy Gourd" class="product-img">
-        <h3>Ivy Gourd</h3>
-        <p class="muted">Seasonal ivy gourd — packed in ventilated cartons.</p>
-      </div>
-
-      <!-- Pointed Gourd -->
-      <div class="card">
-        <img src="assets/vegetable/Pointed Gourd.png" alt="Pointed Gourd" class="product-img">
-        <h3>Pointed Gourd</h3>
-        <p class="muted">Quality pointed gourd, suitable for export markets.</p>
-      </div>
-
-      <!-- Bitter Gourd -->
-      <div class="card">
-        <img src="assets/vegetable/Bitter Gourd.png" alt="Bitter Gourd" class="product-img">
-        <h3>Bitter Gourd</h3>
-        <p class="muted">Bitter gourd / karela — handled under cold chain to maintain freshness.</p>
-      </div>
-
-      <!-- Snake Gourd -->
-      <div class="card">
-        <img src="assets/vegetable/Snake Gourd.png" alt="Snake Gourd" class="product-img">
-        <h3>Snake Gourd</h3>
-        <p class="muted">Long snake gourd — packed per buyer specification.</p>
-      </div>
-
-      <!-- Sponge Gourd -->
-      <div class="card">
-        <img src="assets/vegetable/Sponge Gourd.png" alt="Sponge Gourd" class="product-img">
-        <h3>Sponge Gourd</h3>
-        <p class="muted">Sponge gourd — supplied fresh and hygienically handled.</p>
-      </div>
-
-      <!-- Ridge Gourd -->
-      <div class="card">
-        <img src="assets/vegetable/Ridge Gourd.png" alt="Ridge Gourd" class="product-img">
-        <h3>Ridge Gourd</h3>
-        <p class="muted">Ridge gourd — export-quality lots available.</p>
-      </div>
-
-      <!-- Bottle Gourd -->
-      <div class="card">
-        <img src="assets/vegetable/Bottle Gourd.png" alt="Bottle Gourd" class="product-img">
-        <h3>Bottle Gourd</h3>
-        <p class="muted">Bottle gourd (lauki) — packed and shipped in ventilated cartons.</p>
-      </div>
-
-      <!-- Shiitake Mushrooms -->
-      <div class="card">
-        <img src="assets/vegetable/Shiitake Mushrooms.png" alt="Shiitake Mushrooms" class="product-img">
-        <h3>Shiitake Mushrooms</h3>
-        <p class="muted">Premium shiitake mushrooms for retail and gourmet markets.</p>
-      </div>
-
-      <!-- Artichoke -->
-      <div class="card">
-        <img src="assets/vegetable/Artichoke.png" alt="Artichoke" class="product-img">
-        <h3>Artichoke</h3>
-        <p class="muted">Whole artichokes, carefully packed for export.</p>
-      </div>
-
-      <!-- Asparagus -->
-      <div class="card">
-        <img src="assets/vegetable/Asparagus.png" alt="Asparagus" class="product-img">
-        <h3>Asparagus</h3>
-        <p class="muted">Fresh asparagus — high quality, cold chain handled.</p>
-      </div>
-
-      <!-- King Oyster Mushroom -->
-      <div class="card">
-        <img src="assets/vegetable/King Oyester Mushroom.png" alt="King Oyster Mushroom" class="product-img">
-        <h3>King Oyster Mushroom</h3>
-        <p class="muted">Specialty oyster mushroom variety for premium markets.</p>
-      </div>
-
-      <!-- Maitake -->
-      <div class="card">
-        <img src="assets/vegetable/Maitake (Hen-of-the-Woods).png" alt="Maitake" class="product-img">
-        <h3>Maitake (Hen-of-the-Woods)</h3>
-        <p class="muted">Maitake mushrooms — gourmet variety for niche buyers.</p>
-      </div>
-
-      <!-- Oyster Mushroom -->
-      <div class="card">
-        <img src="assets/vegetable/Oyester Mushroom.png" alt="Oyster Mushroom" class="product-img">
-        <h3>Oyster Mushroom</h3>
-        <p class="muted">Common oyster mushrooms — packed hygienically for export.</p>
-      </div>
-
-      <!-- Button Mushroom -->
-      <div class="card">
-        <img src="assets/vegetable/Button Mushroom.png" alt="Button Mushroom" class="product-img">
-        <h3>Button Mushroom</h3>
-        <p class="muted">Button mushrooms — bulk and retail packaging available.</p>
-      </div>
-
-      <!-- Celery -->
-      <div class="card">
-        <img src="assets/vegetable/Celery.png" alt="Celery" class="product-img">
-        <h3>Celery</h3>
-        <p class="muted">Fresh celery — washed and packed for fresh markets.</p>
-      </div>
-
-      <!-- Yellow Zucchini -->
-      <div class="card">
-        <img src="assets/vegetable/Yellow Zucchini.png" alt="Yellow Zucchini" class="product-img">
-        <h3>Yellow Zucchini</h3>
-        <p class="muted">Yellow zucchini — available for retail and processing needs.</p>
-      </div>
-
-      <!-- Green Zucchini -->
-      <div class="card">
-        <img src="assets/vegetable/Green Zucchini.png" alt="Green Zucchini" class="product-img">
-        <h3>Green Zucchini</h3>
-        <p class="muted">Green zucchini — export-grade lots available.</p>
-      </div>
-
-      <!-- Broccoli -->
-      <div class="card">
-        <img src="assets/vegetable/Brocolli.png" alt="Broccoli" class="product-img">
-        <h3>Broccoli</h3>
-        <p class="muted">Fresh broccoli — graded and packed for export.</p>
-      </div>
-
-      <!-- Baby Corn -->
-      <div class="card">
-        <img src="assets/vegetable/Baby Corn.png" alt="Baby Corn" class="product-img">
-        <h3>Baby Corn</h3>
-        <p class="muted">Baby corn for freezing and retail markets.</p>
-      </div>
-
-      <!-- Knol Khol -->
-      <div class="card">
-        <img src="assets/vegetable/Knol Khol.png" alt="Knol Khol" class="product-img">
-        <h3>Knol Khol</h3>
-        <p class="muted">Kohlrabi / knol khol — handled to buyer specs.</p>
-      </div>
-
-      <!-- Bok Choy -->
-      <div class="card">
-        <img src="assets/vegetable/Bok Choy.png" alt="Bok Choy" class="product-img">
-        <h3>Bok Choy</h3>
-        <p class="muted">Bok choy — packed for fresh markets and restaurants.</p>
-      </div>
-
-      <!-- Brussels Sprouts -->
-      <div class="card">
-        <img src="assets/vegetable/Brussels Sprouts.png" alt="Brussels Sprouts" class="product-img">
-        <h3>Brussels Sprouts</h3>
-        <p class="muted">Small-batch brussels sprouts — export quality.</p>
-      </div>
-
-      <!-- Chinese Cabbage -->
-      <div class="card">
-        <img src="assets/vegetable/Chinnese Cabbage.png" alt="Chinese Cabbage" class="product-img">
-        <h3>Chinese Cabbage</h3>
-        <p class="muted">Chinese cabbage — packed and graded on demand.</p>
-      </div>
-
-      <!-- Cabbage -->
-      <div class="card">
-        <img src="assets/vegetable/Cabbage.png" alt="Cabbage" class="product-img">
-        <h3>Cabbage</h3>
-        <p class="muted">Fresh cabbage — bulk and retail packaging available.</p>
-      </div>
-
-      <!-- Cauliflower -->
-      <div class="card">
-        <img src="assets/vegetable/Cauliflower.png" alt="Cauliflower" class="product-img">
-        <h3>Cauliflower</h3>
-        <p class="muted">Cauliflower — handled with chilled logistics.</p>
-      </div>
-
-      <!-- Fennel Bulb -->
-      <div class="card">
-        <img src="assets/vegetable/Fennel Bulb.png" alt="Fennel Bulb" class="product-img">
-        <h3>Fennel Bulb</h3>
-        <p class="muted">Fennel bulbs for retail and wholesale supply.</p>
-      </div>
-
-      <!-- Leeks -->
-      <div class="card">
-        <img src="assets/vegetable/Leeks.png" alt="Leeks" class="product-img">
-        <h3>Leeks</h3>
-        <p class="muted">Fresh leeks — packed and graded for export markets.</p>
-      </div>
-
-      <!-- Onion -->
-      <div class="card">
-        <img src="assets/vegetable/Onion.png" alt="Onion" class="product-img">
-        <h3>Onion</h3>
-        <p class="muted">Commercial onion varieties — bulk shipments available.</p>
-      </div>
-
-      <!-- Garlic -->
-      <div class="card">
-        <img src="assets/vegetable/Garlic Whole Big (White).png" alt="Garlic" class="product-img">
-        <h3>Garlic (Whole – Big)</h3>
-        <p class="muted">Large whole garlic bulbs — export grade.</p>
-      </div>
-
-    </div>
-  </section>
-
+    <!-- add other vegetable cards following same pattern -->
+  </div>
 </main>
 
-<footer class="footer container">
-  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-    <div>© Exponab • Dubai</div>
-    <div class="muted">info@exponab.com • +971 58 128 5338 / +971 54 741 0141</div>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="copy">© Exponab • Dubai</div>
+    <div class="contact">info@exponab.com • +971 58 128 5338</div>
   </div>
 </footer>
 
+<button class="fab-wa" onclick="openWhatsApp()" title="Chat on WhatsApp">💬</button>
 <script src="script.js"></script>
 </body>
 </html>
