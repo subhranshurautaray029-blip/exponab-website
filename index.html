@@ -63,11 +63,26 @@
       </div>
     </div>
 
+    <!-- HERO MEDIA COLUMN
+         Video box is intentionally small and boxed (above the large banner).
+         The JS below will autoplay this once per session. -->
     <div class="hero-media reveal">
-      <!-- video with fallback poster to hero-banner.png -->
-      <video class="hero-video" playsinline muted loop preload="metadata" poster="assets/hero-banner.png">
-        <source src="assets/Exponab%20logo%20intro.mp4" type="video/mp4">
-      </video>
+      <div class="hero-video-box" aria-hidden="false">
+        <video id="heroIntroVideo"
+               preload="metadata"
+               playsinline
+               muted
+               poster="assets/hero-banner.png"
+               tabindex="0">
+          <source src="assets/Exponab%20logo%20intro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Banner below video, kept as decorative hero banner -->
+      <div class="hero-media-banner">
+        <img src="assets/hero-banner.png" alt="Exponab hero banner" style="width:100%;border-radius:12px;display:block;margin-top:12px" loading="lazy">
+      </div>
 
       <div class="hero-pledge">
         <strong>Our Promise</strong>
@@ -127,7 +142,7 @@
         <div class="product-desc">Aromatic Alphonso — export-ready.</div>
         <div class="product-actions">
           <a class="btn-quote" href="contact.html?product=Alphonso%20Mango">Request Quote</a>
-          <a class="btn btn-ghost" href="https://wa.me/971581285338" target="_blank">WhatsApp</a>
+          <a class="btn btn-ghost" href="https://wa.me/971581285338" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </article>
@@ -139,7 +154,7 @@
         <div class="product-desc">Multiple varieties — export sizes available.</div>
         <div class="product-actions">
           <a class="btn-quote" href="contact.html?product=Apple">Request Quote</a>
-          <a class="btn btn-ghost" href="https://wa.me/971581285338" target="_blank">WhatsApp</a>
+          <a class="btn btn-ghost" href="https://wa.me/971581285338" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </article>
@@ -151,7 +166,7 @@
         <div class="product-desc">Premium Hass & local varieties.</div>
         <div class="product-actions">
           <a class="btn-quote" href="contact.html?product=Avocado">Request Quote</a>
-          <a class="btn btn-ghost" href="https://wa.me/971581285338" target="_blank">WhatsApp</a>
+          <a class="btn btn-ghost" href="https://wa.me/971581285338" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </article>
@@ -188,6 +203,73 @@
 <!-- Floating WhatsApp -->
 <button class="fab-wa" onclick="openWhatsApp()" title="Chat on WhatsApp">💬</button>
 
-<script src="script.js"></script>
+<script>
+/* Basic helpers for nav and whatsapp */
+function openWhatsApp(){
+  window.open('https://wa.me/971581285338', '_blank');
+}
+
+/* video autoplay behavior: play once per browser session */
+(function(){
+  var vid = document.getElementById('heroIntroVideo');
+  if(!vid) return;
+
+  // function to safely attempt play (browsers allow autoplay muted)
+  function startIntroIfNeeded(){
+    try {
+      var played = sessionStorage.getItem('exponab_intro_played');
+      if(!played){
+        vid.muted = true;
+        vid.play().catch(function(){ /* keep silent if not allowed */ });
+        // set flag so we don't autoplay again this session
+        vid.addEventListener('ended', function(){
+          sessionStorage.setItem('exponab_intro_played', '1');
+        }, { once: true });
+        // also set small fallback in case user closes
+        setTimeout(function(){
+          sessionStorage.setItem('exponab_intro_played', '1');
+        }, 30*1000); // 30s safety
+      } else {
+        // don't autoplay; leave poster in place
+        vid.pause();
+      }
+    } catch(e){
+      // ignore storage errors and try to play once
+      try { vid.play(); } catch(e2){}
+    }
+  }
+
+  // user can click "Watch Intro" button to open it manually
+  var watchBtn = document.getElementById('watchIntro');
+  if(watchBtn){
+    watchBtn.addEventListener('click', function(){
+      // unmute and play
+      vid.muted = false;
+      vid.play().catch(function(){});
+      // set played flag
+      try { sessionStorage.setItem('exponab_intro_played', '1'); } catch(e){}
+    });
+  }
+
+  // start after DOM ready
+  document.addEventListener('DOMContentLoaded', startIntroIfNeeded);
+})();
+
+/* Simple reveal on scroll (CSS-driven with small JS trigger) */
+(function(){
+  var revealEls = document.querySelectorAll('.reveal');
+  function checkReveal(){
+    var h = window.innerHeight;
+    revealEls.forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(r.top < h - 60) el.classList.add('revealed');
+    });
+  }
+  document.addEventListener('scroll', checkReveal, { passive:true });
+  window.addEventListener('resize', checkReveal);
+  document.addEventListener('DOMContentLoaded', checkReveal);
+})();
+</script>
+
 </body>
 </html>
