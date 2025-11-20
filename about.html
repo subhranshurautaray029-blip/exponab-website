@@ -1,88 +1,64 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About Exponab — Import & Export • Dubai</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="logo.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Exponab</title>
+  <link rel="icon" href="assets/Exponab%20Logo.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header class="container header">
-  <img src="logo.png" class="logo" alt="Exponab Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products-fruit.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="index.html"><img src="assets/Exponab%20Logo.png" alt="Exponab Logo" class="logo"></a>
+    <nav class="nav-main">
+      <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+      <ul id="navMenu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="products-fruit.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta"><button class="btn btn-ghost" onclick="openWhatsApp()">WhatsApp</button><a class="btn btn-primary" href="contact.html">Request a Quote</a></div>
+  </div>
 </header>
 
-<main class="container" style="padding-top:18px;">
-
-  <section class="card" style="padding:22px;">
-    <div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap">
-      <div style="flex:1;min-width:260px">
-        <h1 style="margin:0 0 8px">About Exponab</h1>
-        <p class="muted" style="margin:0 0 12px">Exponab is a Dubai-based trading company specializing in the sourcing, quality assurance and international export of fresh fruits, vegetables, pulses and halal meat. We serve buyers across the GCC, Africa and Asia with end-to-end logistics, export documentation and reliable cold-chain handling.</p>
-
-        <h3 style="margin-top:14px">Our Services</h3>
-        <ul class="muted">
-          <li>Sourcing from verified growers & processors</li>
-          <li>Quality control & laboratory testing</li>
-          <li>Phytosanitary & export documentation</li>
-          <li>Cold chain logistics & export packing</li>
-          <li>Custom packaging and labeling for buyers</li>
-        </ul>
-      </div>
-
-      <div style="width:360px;min-width:220px">
-        <img src="hero.jpg" alt="Exponab operations" style="width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:12px">
-        <div class="card" style="padding:12px;">
-          <div style="font-weight:800">Head Office</div>
-          <div class="muted" style="margin-top:6px">Al Aweer Central Fruit & Vegetable Market, Dubai, UAE</div>
-          <div style="margin-top:8px" class="muted"><strong>Email:</strong> <a href="mailto:info@exponab.com">info@exponab.com</a></div>
-          <div class="muted" style="margin-top:6px"><strong>Phone:</strong> <a href="tel:+971581285338">+971 58 128 5338</a> / <a href="tel:+971547410141">+971 54 741 0141</a></div>
-        </div>
-      </div>
+<main class="container section">
+  <h1>About Exponab</h1>
+  <div class="grid cards">
+    <div class="card reveal">
+      <h3>Who we are</h3>
+      <p>Exponab is a Dubai-based trading company specializing in the sourcing, quality assurance and international export of fresh fruits, vegetables, pulses and halal meat. We serve buyers across the GCC, Africa and Asia with end-to-end logistics, export documentation and reliable cold-chain handling.</p>
+      <ul>
+        <li>Sourcing from verified growers & processors</li>
+        <li>Quality control & laboratory testing</li>
+        <li>Phytosanitary & export documentation</li>
+        <li>Cold chain logistics & export packing</li>
+        <li>Custom packaging and labeling for buyers</li>
+      </ul>
     </div>
-  </section>
 
-  <section style="margin-top:18px">
-    <h2>Quality & Compliance</h2>
-    <div class="grid" style="margin-top:12px">
-      <div class="card">
-        <h3>Quality Control</h3>
-        <p class="muted">We perform supplier audits, batch inspections and lab tests to ensure every shipment meets buyer specifications.</p>
-      </div>
-      <div class="card">
-        <h3>Certifications</h3>
-        <p class="muted">We work with HACCP, Halal certification bodies and provide phytosanitary certificates as required by importing countries.</p>
-      </div>
-      <div class="card">
-        <h3>Logistics</h3>
-        <p class="muted">Sea and air freight partners, refrigerated storage and export packing to maintain cold chain integrity.</p>
-      </div>
+    <div class="card reveal">
+      <h3>Our Promise</h3>
+      <p>Quality — Compliance — Timely Delivery</p>
+      <p><strong>Head Office</strong><br>Al Aweer Central Fruit & Vegetable Market, Dubai, UAE<br>Email: <a href="mailto:info@exponab.com">info@exponab.com</a><br>Phone: +971 58 128 5338 / +971 54 741 0141</p>
     </div>
-  </section>
+  </div>
 
-  <section style="margin-top:18px">
-    <h2>Markets We Serve</h2>
-    <div class="card" style="padding:16px">
-      <p class="muted" style="margin:0">GCC, Middle East, Africa, South Asia — we have long-term trade partners and experience exporting to regulated markets with strict import requirements.</p>
-    </div>
-  </section>
-
+  <h2 class="section-title">Quality & Compliance</h2>
+  <div class="grid cards">
+    <div class="card reveal"><h4>Quality Control</h4><p>Supplier audits, batch inspections and lab tests to ensure every shipment meets buyer specifications.</p></div>
+    <div class="card reveal"><h4>Certifications</h4><p>We work with HACCP, Halal certification bodies and provide phytosanitary certificates as required.</p></div>
+    <div class="card reveal"><h4>Logistics</h4><p>Sea and air freight partners, refrigerated storage and export packing to maintain cold chain integrity.</p></div>
+  </div>
 </main>
 
-<footer class="footer container">
-  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-    <div>© Exponab • Dubai</div>
-    <div class="muted">info@exponab.com • +971 58 128 5338 / +971 54 741 0141</div>
-  </div>
+<footer class="site-footer">
+  <div class="container footer-inner"><div class="copy">© Exponab • Dubai</div><div class="contact">info@exponab.com • +971 58 128 5338</div></div>
 </footer>
 
+<button class="fab-wa" onclick="openWhatsApp()" title="Chat on WhatsApp">💬</button>
 <script src="script.js"></script>
 </body>
 </html>
